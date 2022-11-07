@@ -1,0 +1,14 @@
+name: sampleCD
+
+on:
+  push:
+    branches: [ "main"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: Production
+    steps:
+      - name: echo a message
+        run: echo 'deploy!'
